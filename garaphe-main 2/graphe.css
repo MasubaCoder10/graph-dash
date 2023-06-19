@@ -1,0 +1,8 @@
+.graphe-content{
+    border: 1px solid red;
+    background-color:  #73d5e7;;
+    max-width: 1440px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80%);
+}

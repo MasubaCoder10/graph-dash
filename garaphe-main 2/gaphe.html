@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ChartJsFile/chart.umd.min.js">
+    <link rel="stylesheet" href="graphe.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="graphe-content">
+        <div>
+            <canvas id="myChart" style="width:1000px; height: 500px;"></canvas>
+          </div>
+    
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="./chart.umd.min.js"></script>
+    
+          <script>
+            const ctx = document.getElementById("myChart");
+    
+            new Chart(ctx, {
+              type: "bar",
+              data: {
+                labels: [
+                  "JAN",
+                  "FEV",
+                  "MARS",
+                  "AVRIL",
+                  "MAI",
+                  "JUIN",
+                  "JUL",
+                  "AOUT",
+                  "SEP",
+                  "OCT",
+                  "NOV",
+                  "DEC",
+                ],
+                datasets: [
+                  {
+                    label: "",
+                    data: [6, 4, 7, 3, 6, 2, 5, 6, 6, 6, 6, 6],
+                    borderWidth: 0,
+                    backgroundColor: "white",
+                    hoverBackgroundColor: "#4A96A6",
+                    barThickness: 20,
+    
+                  },
+                ],
+              },
+              options: {
+                maintainAspectRatio: false,
+                plugins: {
+                  legend: {
+                    display: false,
+                  },
+                },
+    
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    display: false,
+                  },
+    
+                  x: {
+                    grid: {
+                      color: "white",
+                    },
+                  },
+                },
+              },
+            });
+          </script>
+    </div>
+    
+</body>
+</html>
